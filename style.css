@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,200;1,300&family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+:root {
+    --black: black;
+    --light-black: rgb(231, 231, 231);
+    --white: white;
+
+    --font-primary: 'Roboto';
+    --font-secondary: 'Nunito';
+    --font-size-main: 18px;
+    --font-size-primary: 36px;
+    --font-size-title: 45px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: var(--font-size-main);
+    font-family: var(--font-primary);
+
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+.body {
+    margin: 0 auto;
+
+    max-width: 1440px;
+    min-height: 800px;
+
+    background-color: var(--white);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    padding: 30px 50px;
+}
+
+.navigation-list {
+    display: flex;
+    column-gap: 40px;
+}
+
+.link {
+    color: var(--black);
+}
+
+.hidden {
+    display: none;
+}
+
+.copyright {
+    margin-left: auto;
+}
+
+.slider-preview {
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.068) 40%, rgba(0, 0, 0, 0.93) 100%),
+        url('https://images.unsplash.com/photo-1526069824293-406685e85766?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 0px -200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slider-control {
+    position: absolute;
+    background: none;
+    font-size: 50px;
+}
+
+.slider-control::after {
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: ">"
+}
+
+.slider-control--left {
+    /* transform: rotate(180deg); */
+    /* left: 5%; */
+}
